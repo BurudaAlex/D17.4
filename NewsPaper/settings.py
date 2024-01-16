@@ -82,6 +82,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'basic.middlewares.TimezoneMiddleware',
 
 ]
 
@@ -142,14 +143,11 @@ AUTHENTICATION_BACKENDS = [
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
+    ('ja', '日本語'),
     ('en-us', 'English'),
     ('ru', 'Русский'),
 ]
-MODELTRANSLATION_LANGUAGES = [
-    ('jp', '日本語'),
-    ('en-us', 'English'),
-    ('ru', 'Русский'),
-]
+MODELTRANSLATION_LANGUAGES = ['ja', 'en-us', 'ru']
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
